@@ -16,7 +16,7 @@ function App() {
         <ImgContainer number={number}>
           <img src='./assets/onepiece.jpg'/>
         </ImgContainer>
-        <NumberContainer>
+        <NumberContainer number={number}>
           <h1>{number}%</h1>
         </NumberContainer>
     </div>

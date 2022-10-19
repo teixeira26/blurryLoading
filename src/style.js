@@ -5,7 +5,6 @@ export const ImgContainer = styled.div`
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom, #161616 20%, #1E1E1E 50%, #1D161D 70%, black);
-    
 
     & img{
         width: 100%;
@@ -22,6 +21,7 @@ export const NumberContainer = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+    opacity: ${props=>1-(props.number/100)};;
     width: 100vw;
     height: 100vh;
     display: flex;

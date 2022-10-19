@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { ImgContainer, NumberContainer } from './style';
 
 function App() {
+  const [number, setNumber] = useState<number>(0)
+ 
+  
+  useEffect(()=>{
+    if(number<100)setTimeout(()=>setNumber(number+1),30)
+  },[number])
+  
+  
+  // if (number === 100)clearInterval(a)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <ImgContainer number={number}>
+          <img src='./assets/onepiece.jpg'/>
+        </ImgContainer>
+        <NumberContainer>
+          <h1>{number}%</h1>
+        </NumberContainer>
     </div>
   );
 }

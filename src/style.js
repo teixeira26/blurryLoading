@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {createGlobalStyle} from 'styled-components';
 
 
 export const ImgContainer = styled.div`
@@ -29,4 +29,10 @@ export const NumberContainer = styled.div`
     align-items: center;
 
 
+`
+
+export const GlobalStyle = createGlobalStyle`
+    body{
+        margin: 0;
+    }
 `
